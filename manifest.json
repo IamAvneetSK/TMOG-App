@@ -1,0 +1,60 @@
+{
+    "short_name":"TMOG",
+    "categories": ["technology", "gadgets", "content"],
+    "name":"Tech Milestone X The Tech View",
+    "description":"Have a single place to watch, listen and enjoy updates.",
+    "icons":[
+        {"src":"/assets/img/icons/techmilestone-icon-square-192px.png",
+            "type":"image/png","sizes":"192x192",
+            "purpose": "any"},
+        {"src":"/assets/img/icons/techmilestone-icon-square-512px.png",
+            "type":"image/png","sizes":"512x512",
+            "purpose": "any"},
+        {"src":"/assets/img/icons/techmilestone-icon-square-512px.png",
+                "type":"image/png","sizes":"512x512",
+                "purpose": "maskable"},
+        {"src":"/assets/img/icons/techmilestone-apple-touch-icon-192px.png",
+            "type":"image/png","sizes":"192x192",
+            "purpose": "maskable"}
+             ],
+    "start_url":"/",
+    "background_color":"#ffffff",
+    "theme_color":"#5e17eb",
+    "orientation":"any",
+    "display":"standalone",
+    
+    "shortcuts" : [
+        {
+          "name": "Home",
+          "url": "/index.html",
+          "description": "Gets you to the Home Page",
+          "icon":[
+            {"src":"assets/img/icons/pwa/home-sc.png",
+            "type":"image/png",
+            "sizes":"500x500","purpose":"any maskable"},
+            {"src":"assets/img/icons/pwa/home-sc.png",
+            "type":"image/png","sizes":"192x192","purpose":"any maskable"}
+          ]
+        },
+        {
+          "name": "Watch",
+          "url": "/watch.html",
+          "description":"Watch all content from the TMOG Projects",
+          "icon":[{"src":"assets/img/icons/pwa/watch-sc.png",
+            "type":"image/png",
+            "sizes":"500x500","purpose":"any maskable"},
+            {"src":"assets/img/icons/pwa/watch-sc.png",
+            "type":"image/png","sizes":"192x192","purpose":"any maskable"}]
+        },
+        {
+          "name": "Listen",
+          "url": "/listen.html",
+          "description":"Listen to all latest episodes from TMOG Audio.",
+          "icon":[{"src":"assets/img/icons/pwa/listen-sc.png",
+            "type":"image/png",
+            "sizes":"500x500","purpose":"any maskable"},
+            {"src":"assets/img/icons/pwa/listen-sc.png",
+            "type":"image/png","sizes":"192x192","purpose":"any maskable"}]
+        }
+      ]
+}
