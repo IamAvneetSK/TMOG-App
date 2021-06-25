@@ -22,7 +22,7 @@
     "theme_color":"#5e17eb",
     "orientation":"any",
     "display":"standalone",
-    
+    "gcm_sender_id": "157779499301",
     "shortcuts" : [
         {
           "name": "Home",
