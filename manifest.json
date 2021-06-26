@@ -2,7 +2,7 @@
     "short_name":"TMOG",
     "categories": ["technology", "gadgets", "content"],
     "name":"Tech Milestone X The Tech View",
-    "description":"Have a single place to watch, listen and enjoy updates.",
+    "description":"TMOG is a PWA app created by Tech Milestone to have a single place to watch, listen and enjoy all updates. With TMOG, Tech Milestone and The Tech View is committed to share genuine and orignal works for all OG people. If you are a OG, Install the App now.",
     "icons":[
         {"src":"/assets/img/icons/techmilestone-icon-square-192px.png",
             "type":"image/png","sizes":"192x192",
@@ -28,33 +28,27 @@
           "name": "Home",
           "url": "/index.html",
           "description": "Gets you to the Home Page",
-          "icon":[
+          "icons":[
             {"src":"assets/img/icons/pwa/home-sc.png",
             "type":"image/png",
-            "sizes":"500x500","purpose":"any maskable"},
-            {"src":"assets/img/icons/pwa/home-sc.png",
-            "type":"image/png","sizes":"192x192","purpose":"any maskable"}
+            "sizes":"500x500","purpose":"any maskable"}
           ]
         },
         {
           "name": "Watch",
           "url": "/watch.html",
           "description":"Watch all content from the TMOG Projects",
-          "icon":[{"src":"assets/img/icons/pwa/watch-sc.png",
+          "icons":[{"src":"assets/img/icons/pwa/watch-sc.png",
             "type":"image/png",
-            "sizes":"500x500","purpose":"any maskable"},
-            {"src":"assets/img/icons/pwa/watch-sc.png",
-            "type":"image/png","sizes":"192x192","purpose":"any maskable"}]
+            "sizes":"500x500","purpose":"any maskable"}]
         },
         {
           "name": "Listen",
           "url": "/listen.html",
           "description":"Listen to all latest episodes from TMOG Audio.",
-          "icon":[{"src":"assets/img/icons/pwa/listen-sc.png",
+          "icons":[{"src":"assets/img/icons/pwa/listen-sc.png",
             "type":"image/png",
-            "sizes":"500x500","purpose":"any maskable"},
-            {"src":"assets/img/icons/pwa/listen-sc.png",
-            "type":"image/png","sizes":"192x192","purpose":"any maskable"}]
+            "sizes":"500x500","purpose":"any maskable"}]
         }
       ]
 }
