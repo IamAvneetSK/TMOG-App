@@ -1,24 +1,18 @@
-$(document).ready(function() {
-    var ytVideo = [];
-    $.ajax({
-    url: 'https://cors-anywhere.herokuapp.com/https://www.youtube.com/feeds/videos.xml?channel_id=UCq6e2nuNB3LMIMOgeV2ReFA',
-    success: function(respj){
-        console.log("respj", respj);
-        respj = respj.getElementsByTagName("entry");
-        $.each(respj, function(index, val) {
-            ytVideo[index] = {
-                "videoId":val.children[1].innerHTML,
-                "title":val.children[3].innerHTML,
-                "published":val.children[6].innerHTML
-            };
-        });
-        setVideoCards(ytVideo);
+var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+
+function loadVideo(iframe) {
+  $.getJSON(reqURL + iframe.getAttribute('cid'),
+    function(data) {
+      var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+      console.log(videoNumber);
+      var link = data.items[videoNumber].link;
+      id = link.substr(link.indexOf("=") + 1);
+      iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=0");
     }
-    });
-});
-function setVideoCards(ytVideo) {
-var index = 0;
-for (var i = 0; i <= 15; i++) {
-    $("#ytframe").append('<div id="cplay" class="col-md-3"><iframe src="https://www.youtube.com/embed/'+ytVideo[i].videoId+'" allowfullscreen></iframe><p>'+ytVideo[i].title+'</p><p>'+ytVideo[i].published+'</p></div>');
+  );
 }
+
+var iframes = document.getElementsByClassName('latestVideoEmbed');
+for (var i = 0, len = iframes.length; i < len; i++) {
+  loadVideo(iframes[i]);
 }
